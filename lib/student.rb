@@ -39,7 +39,7 @@ class Student
   def self.students_below_12th_grade
     row = DB[:conn].execute('SELECT * FROM students WHERE grade < 12')
     self.new_from_db(row.flatten)
-    row
+    return row
   end
 
 
