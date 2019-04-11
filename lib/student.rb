@@ -39,8 +39,11 @@ class Student
   end
 
   def self.students_below_12th_grade
+    result = []
     row_arr = DB[:conn].execute('SELECT * FROM students WHERE grade < 12')
-    self.new_from_db(row)
+    row_arr.each do |row|
+      result << self.new_from_db(row)
+    end
 
 
   end
