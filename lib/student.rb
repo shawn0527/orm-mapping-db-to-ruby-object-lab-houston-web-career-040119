@@ -68,7 +68,7 @@ class Student
     end
     result
   end
-    
+
 
 
 
