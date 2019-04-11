@@ -52,6 +52,9 @@ class Student
     row_arr = DB[:conn].execute('SELECT * FROM students WHERE grade = 10 ORDER BY grade LIMIT ?', x)
     row_arr.each do |row|
       result << self.new_from_db(row)
+    end
+    result
+  end
 
 
 
