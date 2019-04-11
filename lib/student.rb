@@ -10,7 +10,7 @@ class Student
     new_student.grade = row[2]
     [new_student]
 
-    binding.pry
+    # binding.pry
 
   end
 
