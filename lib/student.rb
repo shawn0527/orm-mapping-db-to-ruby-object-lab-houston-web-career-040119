@@ -10,6 +10,8 @@ class Student
     new_student.grade = row[2]
     new_student
 
+    binding.pry
+
   end
 
   def self.all
