@@ -60,7 +60,15 @@ class Student
     self.new_from_db(DB[:conn].execute('SELECT * FROM students WHERE grade = 10 ORDER BY grade LIMIT 1').flatten)
   end
 
-
+  def self.all_students_in_grade_X(x)
+    result = []
+    row_arr = DB[:conn].execute('SELECT * FROM students WHERE grade = ?', x)
+    row_arr.each do |row|
+      result << self.new_from_db(row)
+    end
+    result
+  end
+    
 
 
 
