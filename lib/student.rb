@@ -44,7 +44,7 @@ class Student
     row_arr.each do |row|
       result << self.new_from_db(row)
     end
-
+    result
 
   end
 
