@@ -45,7 +45,6 @@ class Student
       result << self.new_from_db(row)
     end
     result
-
   end
 
 
