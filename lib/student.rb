@@ -40,8 +40,6 @@ class Student
     row = DB[:conn].execute('SELECT * FROM students WHERE grade < 12')
     self.new_from_db(row.flatten)
     row
-
-    binding.pry
   end
 
 
